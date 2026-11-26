@@ -5,7 +5,7 @@ from pymongo import ASCENDING, DESCENDING
 from pymongo.errors import PyMongoError
 
 from API.database import reportes
-from API.routes import cuadrillas, health, reportes as rutas_reportes
+from API.routes import conection, cuadrillas, reportes as rutas_reportes
 
 
 @asynccontextmanager
@@ -27,6 +27,6 @@ app = FastAPI(
     lifespan=ciclo_de_vida,
 )
 
-app.include_router(health.router)
+app.include_router(conection.router)
 app.include_router(rutas_reportes.router)
 app.include_router(cuadrillas.router)

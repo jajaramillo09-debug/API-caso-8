@@ -7,7 +7,7 @@ from API.database import cliente_mongo, r
 router = APIRouter()
 
 
-@router.get("/ping", tags=["Salud"])
+@router.get("/ping", tags=["Conexiones"])
 def ping():
     """Comprueba la conexión a las dos bases de datos."""
     estado = {}

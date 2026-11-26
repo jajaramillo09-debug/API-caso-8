@@ -11,7 +11,7 @@ Proyecto final de Bases de Datos III: API para registrar reportes ciudadanos de 
 ```mermaid
 flowchart LR
     U[Usuario / Swagger] --> API[FastAPI]
-    API --> H[Ruta de salud]
+    API --> H[Ruta de conexiones]
     API --> R[Rutas de reportes]
     API --> C[Rutas de cuadrillas]
     R --> S[Validación Pydantic]
@@ -37,7 +37,7 @@ flowchart LR
 │   ├── database.py         # Configuración y conexiones MongoDB/Redis
 │   ├── utils.py            # Serialización y funciones compartidas
 │   ├── routes/
-│   │   ├── health.py       # GET /ping
+│   │   ├── conection.py    # GET /ping y comprobación de conexiones
 │   │   ├── reportes.py     # CRUD y resumen por barrios
 │   │   └── cuadrillas.py   # Estado de cuadrillas y contador
 │   └── schemas/
